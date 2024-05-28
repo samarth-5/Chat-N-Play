@@ -4,6 +4,7 @@ import App from './App.jsx';
 
 import { ToastContainer } from 'react-toastify';
 import './index.css'
+import 'react-toastify/dist/ReactToastify.css';
 
 import { store, persistor } from './redux/store.js'
 import { Provider } from 'react-redux'
