@@ -13,8 +13,7 @@ export const signup = async(req,res) =>{
     const hashedPassword=bcryptjs.hashSync(password,10);
     const newUser=new User({
         name,
-        email,
-        username,        
+        email,      
         password:hashedPassword
     });
     try{
@@ -28,7 +27,7 @@ export const signup = async(req,res) =>{
     }
 }
 
-export const signin = async(req,res) =>{
+export const login = async(req,res) =>{
     const {email,password}=req.body;
     if(!email || !password || password==='' || email==='')
     {
@@ -57,7 +56,7 @@ export const signin = async(req,res) =>{
     }
 }
 
-export const signout=async(req,res,next)=>{
+export const signout=async(req,res)=>{
     try{
       res.clearCookie('access_token')
          .status(200)

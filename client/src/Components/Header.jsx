@@ -25,7 +25,7 @@ export default function Header() {
         }
         dispatch(signOutSuccess());
         toast.success(data);
-        navigate('/signin');
+        navigate('/login');
     }
     catch(err){
         return toast.error('Internet not connected!');

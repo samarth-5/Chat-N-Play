@@ -27,7 +27,7 @@ export default function SignUp() {
         dispatch(signInStart());
         // setLoading(true);
         // setErrorMessage(null);
-        const res=await fetch('/api/user/signin',{
+        const res=await fetch('/api/user/login',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify(formData),
@@ -36,8 +36,7 @@ export default function SignUp() {
       //console.log(data);
       if (!res.ok) 
       {
-        dispatch(signInFailure(data.message))
-        //setLoading(false);
+        dispatch(signInFailure(data.message));
         return toast.error(data);
       }   
       dispatch(signInSuccess(data));
