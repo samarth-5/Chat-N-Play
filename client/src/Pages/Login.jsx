@@ -66,7 +66,7 @@ export default function SignUp() {
           <div className='flex gap-2 items-center'>
             <p className='text-black text-sm'>Don't have an account?</p>
             <Link to='/signup'>
-              <span className='text-[#6531e0] text-sm hover:underline hover:underline'>Sign up</span>
+              <span className='text-[#6531e0] text-sm hover:underline'>Sign up</span>
             </Link>
           </div>
         </form>
