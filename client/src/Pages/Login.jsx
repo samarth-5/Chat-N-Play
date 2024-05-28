@@ -51,7 +51,7 @@ export default function SignUp() {
   }
 
   return (
-    <section className='flex items-center justify-evenly full-screen-bg p-20'> 
+    <section className='flex items-center justify-evenly full-screen-bg p-20 mt-10'> 
       <div>
         <h2 className='text-4xl font-extrabold mb-8'>TALK WITH A NARRATIVE <br />INTELLIGENCE EXPERT</h2>
         <ul className='flex flex-col gap-2'>
