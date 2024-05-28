@@ -33,20 +33,20 @@ export default function Header() {
 //   }
 
   return (
-    <section className='flex items-center justify-around border-slate-700 border-b py-2 full-screen-bg'>
+    <section className='flex items-center justify-around border-gray-200 border-b py-3 full-screen-bg'>
       <Link to='/'>
         <div className='flex items-center gap-2'>
           <img src={pc} height={60} width={60} alt="logo" />
-          <span className='text-xl font-extrabold'>BlackBird.AI</span>
+          <span className='text-xl font-extrabold'>Chat-N-Play</span>
         </div>
       </Link>
 
       <ul className='flex gap-14 items-center'>
         <Link to='/'>
-          <li className='hidden sm:inline hover:text-[#00ff31] text-lg'>Home</li>
+          <li className='hidden font-bold sm:inline hover:text-[#6531e0] text-lg'>Home</li>
         </Link>
         <Link to='/about'>
-          <li className='hidden sm:inline hover:text-[#00ff31] text-lg'>About</li>
+          <li className='hidden font-bold sm:inline hover:text-[#6531e0] text-lg'>About</li>
         </Link>
         {/* {
           currentUser ? (
@@ -57,9 +57,9 @@ export default function Header() {
             </Link>
           )
         } */}
-        <Link to='/'>
-          <li className='hidden sm:inline hover:text-[#00ff31] text-lg'>About</li>
-        </Link>
+            <Link to='/login'>
+              <button className='text-[#6531e0] text-lg outline rounded-xl p-1 px-4 hover:text-white hover:bg-[#6531e0]'>Try Demo for Free</button>
+            </Link>
       </ul>
     </section>
   )
