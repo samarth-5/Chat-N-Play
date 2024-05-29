@@ -1,7 +1,5 @@
 import mongoose from 'mongoose';
 
-import chatSchema from './chatModel.js';
-
 const userSchema=new mongoose.Schema({
     name: {
         type: String,
@@ -16,11 +14,11 @@ const userSchema=new mongoose.Schema({
         type: String,
         required: true
     },
-    chats: {
-        type: [chatSchema],
-        default: []
+    profilePhoto: {
+        type: String,
+        default: ""
     }
-});
+},{timestamps:true});
 
 const User=mongoose.model('User',userSchema);
 

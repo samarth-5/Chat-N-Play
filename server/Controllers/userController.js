@@ -2,7 +2,16 @@ import User from "../Models/userModel.js";
 import bcryptjs from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
-export const getAllUsers = async(req,res,next) =>{}
+export const getOtherUsers = async(req,res) =>{
+    try{
+      const user=req.id;
+      const otherUsers=await User.find({_id:{$ne:user}}).select("-password");
+      return res.status(200).json(otherUsers);
+    }
+    catch(err){
+        console.log(err);
+    }
+}
 
 export const signup = async(req,res) =>{
     const {name,email,password}=req.body;
@@ -13,7 +22,8 @@ export const signup = async(req,res) =>{
     const hashedPassword=bcryptjs.hashSync(password,10);
     const newUser=new User({
         name,
-        email,      
+        email,    
+        profilePhoto: "https://avatar.iran.liara.run/public",  
         password:hashedPassword
     });
     try{
